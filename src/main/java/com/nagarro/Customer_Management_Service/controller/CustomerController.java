@@ -33,6 +33,11 @@ public class CustomerController {
 		@Autowired
 	    private CustomerService customerService;
 
+		@GetMapping("/welcome")
+		public String getMessage() {
+			return "Welcome to Customer Managament Service!!";
+		}
+		
 		 // Endpoint to retrieve all customers
 	    @GetMapping
 	    public List<Customer> getAllCustomers() {
